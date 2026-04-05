@@ -1,0 +1,49 @@
+# Agentic Engineering Starter Kit
+# .gitignore
+
+# When you copy this starter kit into a project, add project-specific ignores below
+
+# Environment files -- NEVER commit these
+.env
+.env.local
+.env.staging
+.env.production
+.env*.local
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Cache
+.cache/
+.vercel/
+.turbo/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
