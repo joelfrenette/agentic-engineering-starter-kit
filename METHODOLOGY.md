@@ -530,3 +530,70 @@ When a prompt produces surprisingly good results, capture exactly why it worked 
 
 The builders who improve fastest with AI are not the ones with the best AI. They are the ones with the best prompt libraries, because their prompts encode everything they've learned.
 
+
+---
+
+## Part 12: Agile / Scrum Aliases
+
+Every Agile99 phase mapped to its Agile/Scrum equivalent. Use Agile99 as the primary language -- the aliases help when collaborating with teams or stakeholders who speak standard Agile.
+
+| Agile99 Phase | Agile / Scrum Equivalent |
+|--------------|--------------------------|
+| VISION & GOALS | Product Vision; Epic Definition |
+| PRODUCT BLUEPRINT | Story Mapping; PRD; Backlog Creation |
+| SPRINT ZERO | Sprint Zero; Foundation Sprint |
+| PLAN mode | Sprint Planning; Backlog Refinement |
+| ARCHITECT mode | Architecture Spike; Technical Design |
+| CODE mode | Sprint Execution; Development |
+| QA mode | Sprint QA; Test Pass |
+| UAT mode | User Acceptance Testing; Stakeholder Review |
+| PROMOTE | Sprint Release; Ship It |
+| AUDIT mode | Technical Debt Sprint; Hardening Sprint |
+| RETRO | Sprint Retrospective |
+| OPERATE | Kanban / Operations; Maintenance |
+| CHECKPOINT | Milestone Tag; Release Baseline |
+| 8S AUDIT | Definition of Done; Quality Gate |
+
+---
+
+## Part 13: The 99x Equation
+
+The "99" in Agile99 is not arbitrary. Here is the math, shown honestly.
+
+### The inputs
+
+**Traditional Agile sprint (lean 3-developer startup team):**
+- Duration: 2 weeks = 10 business days
+- 3 developers × 10 days × 8 hours = 240 person-hours per sprint
+- At $75/hr blended rate = $18,000 per sprint
+
+**Agile99 branch (one founder + AI agents):**
+- Duration: 1 focused business day
+- 1 person × 8 hours = 8 person-hours
+- Your time + ~$5 in AI API costs = ~$605 at same rate
+
+### The ratios
+
+- **Time:** 10 days → 1 day = **10x faster per iteration**
+- **Cost:** $18,000 → $605 = **~30x cheaper per sprint**
+- **Person-hours:** 240 → 8 = **30x fewer hours**
+
+### The compound claim
+
+10x faster iteration × ~10x cheaper team cost = **~99x more efficient**
+
+The "10x cheaper team" is the conservative figure. A traditional 3-dev startup team costs ~$450k/year in salaries. A solo Agile99 founder spends ~$1,200/year in AI tools. That's 375x cheaper on headcount -- which more than supports the compound math.
+
+### The honest caveat
+
+The 99x is a **compound efficiency** claim (speed × cost), not a pure calendar time claim. A solo founder with AI agents cannot out-code a 10-person team on raw parallel execution. The advantage is **iteration velocity and cost-to-ship** -- the number of tested, deployed features per dollar and per day. That is where Agile99 genuinely dominates.
+
+### Agile99 sprint length
+
+At 10x faster per iteration vs. a traditional 2-week sprint:
+- **Small feature branch:** half a business day (2-4 hours)
+- **Medium feature branch:** 1 business day (4-8 hours)  
+- **Large feature branch:** 2-3 business days
+
+You can run 2-3 sprints per day on focused features. A traditional team runs 1 sprint per 2 weeks. That is the velocity gap.
+
