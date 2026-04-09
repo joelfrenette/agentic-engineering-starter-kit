@@ -28,6 +28,89 @@ Agentic Engineering is vibe coding with a system. The creativity and speed stay.
 
 ---
 
+## Part 1B: The Philosophical Shift (The Most Important Update)
+
+### The Old Way (Error-Prone)
+
+```
+You → Claude (external AI) → manual doc export → manual upload → V0 → code
+→ bug found → describe bug to Claude → Claude advises → paste to V0 → fix
+→ update docs manually → repeat
+```
+
+This worked. But every handoff across tool boundaries was a failure point. Docs went stale. Context got lost between sessions. The feedback loop depended on you remembering to export, upload, and re-explain. Human error was baked in.
+
+### The New Way (Self-Contained)
+
+```
+V0 reads AIRULES.md + CONTEXT.md → codes → end of chat → V0 updates files
+→ next chat reads improved files → codes better → updates files → compounds
+```
+
+The loop never leaves V0 + GitHub. There is no export. There is no upload. There is no external AI needed for day-to-day development. The files ARE the agent's memory. The files improve themselves. Every session the system gets smarter automatically.
+
+### What Changed
+
+The agent's memory and improvement now live in three files in your repo -- not in your head, not in an external AI, not in a manual process:
+
+- **AIRULES.md** -- the rules engine. Every painful bug becomes a rule. Grows and improves with every session.
+- **CONTEXT.md** -- the living project state. V0 reads it at the start of every chat. Knows exactly where you left off. Updated at the end of every chat automatically.
+- **PROMPT-LOG.md** -- the prompt performance log. Captures what worked and what failed. Every session your prompts get sharper.
+
+### The Self-Improving Loop
+
+```
+Chat starts → V0 reads AIRULES.md + CONTEXT.md → knows the rules + current state
+Chat runs  → V0 implements, tests, fixes
+Chat ends  → V0 updates all three files with what changed, what worked, what failed
+Commit     → Files are saved to GitHub
+Next chat  → V0 reads improved files → starts smarter than last time
+```
+
+After 10 chats: the files know your project better than any template.
+After 50 chats: the agent rarely makes the same class of mistake twice.
+After 100 chats: your AIRULES.md is a precisely calibrated instruction set built from real production experience with your specific codebase. No generic guide could replicate it.
+
+This is the compounding effect applied to the AI agent itself -- not just the codebase.
+
+### The Bonus Features (Not Required -- Just Powerful)
+
+The three core files give you permanent memory and self-improvement. These additional capabilities compound on top of that foundation:
+
+- **Live project tracking** -- CONTEXT.md is always current. Any agent reading it knows exactly where the project stands.
+- **Self-updating documentation** -- living docs update as part of the chat close protocol. No manual doc maintenance.
+- **Self-improving prompt library** -- PROMPT-LOG.md captures what works. Prompts get sharper automatically.
+- **Built-in UAT tracking** -- CONTEXT.md tracks what has been UAT-approved. Nothing ships without it.
+
+These are bonuses. The three core files alone give you the fundamental shift. Start simple. The rest follows naturally.
+
+---
+
+## Part 1C: The Matrix Crew -- Agent Personas
+
+Every chat gets a named persona. Every persona has a specific mode and a specific set of behaviors it will and will not exhibit. This is not decoration -- it is a constraint system that prevents the most common V0 failure mode: mode drift.
+
+Mode drift is when a coding agent starts planning, or a planning agent starts coding, or a QA agent starts refactoring. Personas prevent this by giving the agent a clear identity that resists out-of-mode behavior.
+
+**The rule:** One branch. One phase. One persona. One name.
+
+| Phase | Persona | Mode | Does | Does NOT |
+|-------|---------|------|------|----------|
+| MENTOR | **Morpheus the Mentor** | Advice | Explain, advise, recommend | Write code |
+| PLAN | **Oracle the Organizer** | Planning | Task breakdown, estimates | Write code |
+| BUILD | **The Architect** | Design | Schema, API, component design | Write code |
+| CODE | **Cypher the Coder** | Implementation | Implement approved plan only | Improvise or add features |
+| QA | **Trinity the Tester** | Testing | Find bugs, diagnose, document | Fix without approval |
+| AUDIT | **Smith the Scrutinizer** | Audit | Find problems, report findings | Fix without approval |
+| PROMOTE | **Tank the Transporter** | Deploy | Final checks, merge, tag | Skip any checklist item |
+| UAT | **You (The One)** | Acceptance | Test as real user, approve/reject | Trust the agent to do this |
+
+See PROMPTS/15-agent-personas.md for the complete persona prompts to paste at the start of each chat.
+
+---
+
+---
+
 ## Part 2: The Golden Phases (Before Any Code)
 
 This is the most skipped section of any build. It is also the most valuable. The root cause of most failed or stalled projects is not bad code -- it is building the wrong thing, or building the right thing in the wrong order, because the vision was never written down.
@@ -596,4 +679,36 @@ At 10x faster per iteration vs. a traditional 2-week sprint:
 - **Large feature branch:** 2-3 business days
 
 You can run 2-3 sprints per day on focused features. A traditional team runs 1 sprint per 2 weeks. That is the velocity gap.
+
+
+
+---
+
+## Part 14: The Simple Rules (Catchy Edition)
+
+These rules exist because the best rules are the ones you actually remember.
+
+**A Feature in Five** -- 5 chats, 5 branches, 1 shipped feature. Every feature. Every time.
+
+**Prompt 21 is Done** -- Maximum 20 prompts per chat. Hit 21? Close the chat. Open a new one. Paste the opener. The files carry the context -- not the chat.
+
+**New Branch. New Name.** -- One branch = one phase = one persona. When the phase changes, the chat closes, the persona changes, a new branch begins.
+
+**Read Before You Write** -- Agent reads AIRULES.md + CONTEXT.md before writing a single line. No confirmation line output = stop and demand it.
+
+**Plan Before You Build** -- No code without an approved plan. The Architect does not build what Oracle has not approved.
+
+**One Thing. One Prompt.** -- Never ask for two things in one prompt. "And also..." is a second prompt. Send it separately.
+
+**Show Don't Describe** -- Screenshot + console error + Vercel log. Never describe a bug in prose when you can show it.
+
+**Main is Sacred** -- Never push directly to main. PRs only. Branch protection is on. Non-negotiable.
+
+**Close the Chat, Not the Tab** -- Run the End of Chat Protocol before closing any chat. Five minutes now saves hours next session.
+
+**When in Doubt, Audit** -- Messy code gets Smith before Cypher. Audit before features.
+
+**Wake Up, Neo** -- UAT is yours. No agent can test it for you. Open the staging URL. Use it as a real user. If it feels wrong -- it is wrong.
+
+See SIMPLE-RULES.md in the project root for the printable one-page version.
 
