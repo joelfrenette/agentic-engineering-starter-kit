@@ -17,7 +17,7 @@ START HERE. Work through the folders in order:
                         You do not copy these into your project.
 
 That is the whole system.
-3 files in your repo + 1 paste into V0 = Agile99 running.
+3 files in your repo + 1 prompt pasted into V0 = Agile99 running in Morpheus-mode
 
 The Matrix Crew handles the rest.
 Wake up, Neo.
