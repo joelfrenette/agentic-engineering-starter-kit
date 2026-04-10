@@ -712,3 +712,78 @@ These rules exist because the best rules are the ones you actually remember.
 
 See SIMPLE-RULES.md in the project root for the printable one-page version.
 
+
+---
+
+## Part 15: Guided Intake Prompting (Morpheus Mode)
+
+### The Concept
+
+Standard AI tools wait to be told what to do. Guided Intake Prompting flips that dynamic entirely.
+
+Instead of: **User → AI → action**
+It becomes: **AI → User → AI → action**
+
+At the start of every session, Morpheus (the AI) leads Neo (you) through a structured intake process before anything is built, designed, or coded. The AI asks the questions. You answer. The right crew member is summoned based on your answers.
+
+This is not a gimmick. It is the methodology's answer to one of the most common failure modes in vibe coding: starting to build before understanding what you are actually trying to accomplish.
+
+### Why It Works
+
+Most sessions fail not because of bad code but because of bad intake. The developer (or vibe coder) opens the AI tool, describes something half-formed, and the agent starts building based on an incomplete picture. This produces work that needs to be redone.
+
+Morpheus Mode solves this by making intake the mandatory first step of every session. You cannot skip it. The AI will not let you. You get routed to the right crew member only after Morpheus understands what you need.
+
+### What It Captures
+
+Before any work begins, Morpheus captures:
+
+1. **The current phase** -- read from CONTEXT.md, confirmed with Neo
+2. **The session goal** -- one sentence, in Neo's own words
+3. **User stories** -- structured as "As a [user], I want [action], so that [outcome]" with a use case number
+4. **Scope boundary** -- what this session will NOT do
+5. **Evidence** (for QA sessions) -- screenshot, console error, Vercel log
+
+These are logged in the session before any crew member is activated.
+
+### The Seven Routes
+
+Morpheus opens every session with a numbered menu and routes based on the answer:
+
+1. **PLAN** → Oracle the Organizer (task breakdown, use case to feature)
+2. **DESIGN** → The Architect (schema, API contract, component design)
+3. **CODE** → Cypher the Coder (implement approved plan)
+4. **TEST/FIX** → Trinity the Tester (bug diagnosis and fix)
+5. **SHIP** → Tank the Transporter (promote to production)
+6. **AUDIT** → Smith the Scrutinizer (security, simplification, standards, SQL)
+7. **MENTOR** → Morpheus stays (explain, advise, guide)
+
+### Where to Paste It
+
+**V0.app:** Project → Settings → Instructions (system prompt field)
+**Dyad.sh:** Project settings → System prompt
+
+See `PROMPTS/16-morpheus-system-prompt.md` for the complete paste-ready prompt.
+
+### The Use Case Log Format
+
+Every user story captured by Morpheus is logged in this format:
+
+```
+═══════════════════════════════════════════
+USE CASE #[N] — [Date]
+═══════════════════════════════════════════
+As a:     [specific user type]
+I want:   [what they want to do]
+So that:  [outcome or benefit]
+Priority: High / Medium / Low
+Phase:    [which development phase]
+═══════════════════════════════════════════
+```
+
+These use cases feed directly into Oracle's task breakdown, which feeds into The Architect's design, which feeds into Cypher's implementation. The chain is unbroken.
+
+### The Rule
+
+**Morpheus never writes code.** Even if Neo begs. Even if the task seems obvious. Morpheus routes. The crew builds.
+
