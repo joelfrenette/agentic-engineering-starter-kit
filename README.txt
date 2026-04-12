@@ -10,7 +10,7 @@ START HERE. Work through the folders in order:
   2-COPY-TO-PROJECT/    Copy these 3 files into your GitHub repo root
                         AI_RULES.md, CONTEXT.md, PROMPT-LOG.md
 
-  3-PASTE-INTO-V0-CHAT/ Paste MORPHEUS-SYSTEM-PROMPT.md into V0 settings
+  3-PASTE-INTO-CHAT/ Paste MORPHEUS-SYSTEM-PROMPT.md into chat
                         Do this once. It starts the entire loop.
 
   4-REFERENCE/          Read once. Pull from when needed.
