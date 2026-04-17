@@ -9,9 +9,7 @@ START HERE. Work through the folders in order:
                         ~45 minutes to complete.
 
   2-COPY-TO-PROJECT/    Copy the rules files for YOUR tool into your project.
-                        Always include CONTEXT.md and PROMPT-LOG.md.
-                        Also include DESIGN.md and SECURITY_RULES.md.
-
+                       
   3-PASTE-INTO-CHAT/    Paste MORPHEUS-SYSTEM-PROMPT.md as your first message
                         in every new chat session. This starts the entire loop.
 
