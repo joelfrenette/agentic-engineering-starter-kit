@@ -1,6 +1,6 @@
 AGILE99 STARTER KIT v2.1
 ==========================
-agile99.com | github.com/joelfrenette/agile99-starter-kit
+agile99.com | github.com/joelfrenette/Agile99
 
 START HERE. Work through the folders in order:
 
